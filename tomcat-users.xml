@@ -4,13 +4,9 @@
               xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
               version="1.0">
 
- <role rolename="admin"/> 
- <role rolename="admin-gui"/> 
- <role rolename="admin-script"/> 
- <role rolename="manager"/> 
- <role rolename="manager-gui"/> 
- <role rolename="manager-script"/> 
- <role rolename="manager-jmx"/>
- <role rolename="manager-status"/>
- <user name="admin" password="adminadmin" roles="admin,manager,admin-gui,admin-script,manager-gui,manager-script,manager-jmx,manager-status" /> 
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <user username="tomcat" password="password" roles="manager-gui"/>
+  <user username="alice" password="password" roles="manager-gui,manager-script"/>
+  <user username="bob" password="password" roles="manager-script"/> /> 
 </tomcat-users>
